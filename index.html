@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recipes </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+</head>
+
+ <body onload='getRecipes(" ");openForm()'>
+
+    <!-- <div id="loading"></div> -->
+
+    <nav class="navbar navbar-expand-md bg-dark fixed-top navbar-dark">
+      <a href="#"><img src="pic1.jpg" class="logo"></a>
+        <a class="navbar-brand" href="#">Delicious</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home</a>
+                </li> -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      CUISINE
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#" onclick='getRecipes("Indian")'>Indian</a>
+                      <a class="dropdown-item" href="#" onclick='getRecipes("American")'>American</a>
+                      <a class="dropdown-item" href="#" onclick='getRecipes("Chinese")'>Chinese</a>
+                      <a class="dropdown-item" href="#" onclick='getRecipes("Japanese")'>Japanese</a>
+                      <a class="dropdown-item" href="#" onclick='getRecipes("Italian")'>Italian</a>
+                      <a class="dropdown-item" href="#" onclick='getRecipes("Thai")'>Thai</a>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./feedback.html">FEEDBACK</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">CONTACT US</a>
+                </li>
+                
+            </ul>
+        </div>
+       <!-- <div class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                id="search-input">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+         </div> -->
+    </nav>
+<!-- <div class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+        id="search-input">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+ </div> -->
+    <!-- <div class="main-content-header">
+        <h1> Welcome To <span class="colorchange">Recipes</span><br>
+            -Search Your Favourite Recipes <BR> Right Now  !!</h1> -->
+        <!-- <a href="LOG.html" class="btn btn-full"> CREATE ACCOUNT </a>
+        <a href="menu.html" class="btn btn-nav"> MENU</a> -->
+    <!-- </div> --> 
+    <br><br><br><br><br><br><br><br><br>
+    <br><br>
+    <div class="text-center"><h2  style="color:#ffff66;font-size:30px"><span class="colorchange"> Search Your Favourite Recipes Here</span> <h2></div>
+       
+    <div class="form-inline" id="serchss">
+        
+        <!-- <h4> Welcome To <span class="colorchange">Recipes</span>
+            -Search Your Favourite Recipes  Right Now  !!</h4>
+                <br><br> -->
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+            id="search-input">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button" onclick="cleandata()">  X  </button>
+
+    </div>
+   
+    <div id="recipes"></div>
+
+    <!-- popup form -->
+    <div id="id01" class="modal">
+  
+        <form class="modal-contentanimate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+            <img src="pic1.jpg" alt="Avatar" class="avatar">
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            
+            <input type="text" name="" id="nameid" placeholder="Enter Username" value="siddharth"> 
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" value="siddharth" required>
+              
+            <!-- <button  onclick="myfunction()">Login</button> -->
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="formclose() ;myfunction() " class="cancelbtn">LOGIN</button>
+            
+          </div>
+        </form>
+ </div>
+        <!-- main content -->
+ 
+      <!-- <div class="main-content-header">
+        <h1> Welcome To <span class="colorchange">Recipes</span><br>
+            -Search Your Favourite Recipes <BR> Right Now  !!</h1>
+        <a href="LOG.html" class="btn btn-full"> CREATE ACCOUNT </a>
+        <a href="menu.html" class="btn btn-nav"> MENU</a>
+    </div>  -->
+    
+    
+    <!-- Main -->
+    <!-- <div class="main-content-header">
+        <h1> Welcome To <span class="colorchange">Recipes</span><br>
+            -Search Your Favourite Recipes <BR> Right Now  !!</h1>
+        <a href="LOG.html" class="btn btn-full"> CREATE ACCOUNT </a>
+        <a href="menu.html" class="btn btn-nav"> MENU</a>
+    </div>
+    
+    <div class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+            id="search-input">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
+    </div>
+    <div id="recipes"></div> -->
+
+
+    <!-- Modal -->
+    <center>
+        <div class="modal fade in" id="mailModal" role="dialog"
+            style="z-index: 9999; display: none; padding-left: 0px;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="mailheader">Ingredients</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            x
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-horizontal">
+                            <div id="datare">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </center>
+<!-- change -->
+<!-- <div class="boxcon">
+    <a href="#"><img src="fesfwe.png" alt="" class="box-img"></a>
+    <div class="contentcontact">
+        <h2>Connect with us on <br>Social Media Platforms</h2>
+    </div>
+   <div class="middlecon">
+     <a class="btncon" href="https://www.facebook.com/">
+       <i class="fab fa-facebook-f"></i>
+     </a>
+     <a class="btncon" href="https://google.com/login">
+       <i class="fab fa-twitter"></i>
+     </a>
+     <a class="btncon" href="https://www.google.com/">
+       <i class="fab fa-google"></i>
+     </a>
+     <a class="btncon" href="https://www.google.com/?hl=en">
+       <i class="fab fa-instagram"></i>
+     </a>
+     <a class="btncon" href="https://www.google.com/?gl=IN&hl=en-GB">
+       <i class="fab fa-youtube"></i>
+     </a>
+   </div>
+  </div> -->
+<!-- change -->
+    <footer>
+      |  Developers  |   Siddharth Gudwani<a href="https://siddharthgudwani.github.io/Resume/"><img src="fesfwe.png" class="logo31footer"></a> | <a href="https://Simranjitsingh12145.github.io/Resume/">Simranjit Singh</a> |
+     
+    </footer>
+   <footer class="socialfooter">
+       <div class="middlecon">
+         <a class="btncon" href="https://www.facebook.com/">
+           <i class="fab fa-facebook-f"></i>
+         </a>
+
+         <a class="btncon" href="https://google.com/login">
+           <i class="fab fa-twitter"></i>
+         </a>
+
+         <a class="btncon" href="https://www.google.com/">
+           <i class="fab fa-google"></i>
+         </a>
+
+         <a class="btncon" href="https://www.google.com/?hl=en">
+           <i class="fab fa-instagram"></i>
+         </a>
+
+         <a class="btncon" href="https://www.google.com/?gl=IN&hl=en-GB">
+           <i class="fab fa-youtube"></i>
+         </a> 
+
+         </div> 
+    </footer>
+    
+
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> -->
+   
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+ 
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+ <script src="./script.js"></script>
+ <script>
+//  $(document).ready(function(){
+//  // myFunction();
+//  const person = prompt("Please enter your name", "Your Name");
+ 
+  
+//    const name = $('#uname').val();
+//    $('.logo').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+   
+
+  
+//  });
+
+
+
+</script>
+
+</body>
+
+</html>

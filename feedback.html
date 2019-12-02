@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Feedback Form</title>
+<link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+<link rel="stylesheet" type="text/css" href="fstyle.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark fixed-top navbar-dark">
+      <a class="navbar-brand" href="index.html">Delicious</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapsibleNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+         
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+        <div class="feedback-title">
+                    <h1>Give feedback for improvement</h1>
+                    <h2>We are always ready to serve you</h2>
+         </div>
+         <div class="feedback-form">
+                  <form id="feedback-form" method="post" action="" style="display: flex;flex-direction: column;align-items: center">
+                  <input name="name" type="text" class="form-control" placeholder="Your name" required>
+                  <br>
+                   <input name="email" type="email" class="form-control" placeholder="Your e-mail" required>
+                   <br>
+                   <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea><br>
+                   <input type="submit" class="form-control submit" value="SEND MESSAGE">
+                 
+                   </form>
+          </div>        
+</body>
+</html>

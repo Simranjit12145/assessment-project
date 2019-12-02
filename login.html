@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Login </title>
+<link rel="stylesheet" type="text/css" href="log.css">
+<body>
+    <div class="loginbox">
+	<img src="pic1.jpg" class="pic1">
+                  <h1 id="colorchange">Login here</h1>
+                
+                  <p>Username</p>
+                  <input type="text" id="name" placeholder="Enter Username" >
+                  <p>Password</p>
+                  <input type="password" name="" placeholder="Enter Password">
+                  <button>   login    </button><br>
+                  <a href="#">Lost your password?</a><br>
+                  <a href="#">Don't have an account?</a>
+                  
+    </div>
+    
+
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+<script>
+ $(document).ready(function(){
+  $('button').click(function(){
+   const name = $('#name').val();
+   $('.pic1').attr('src',`https://joeschmoe.io/api/v1/${name}`);
+   
+
+  });
+ });
+</script>
+
+</body>
+</head>	
+</html>

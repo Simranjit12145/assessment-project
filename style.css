@@ -1,0 +1,492 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* background-color: #4CAF50; */
+  /* background-image:url('./preloader.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 10%;
+  height: 1vh; */
+
+  /* height: 100vh;
+  width:100%; */
+  /* background-image: url('bg2.jpg'); */
+  /* background-size: auto; */
+  /* background-repeat: no-repeat;
+  background-size: 80% 80%; */
+  /* background-color: violet; */
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0)),url('./food.gif') ;
+  background-size: 100% 285%;
+  background-repeat: no-repeat;
+ 
+}
+.text-center{
+  margin-top:1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-family: 'Flamenco', cursive;
+}
+/* front page content */
+
+.main-content-header{
+	width: 1180px;
+	padding:0 2%;
+	position: absolute;
+	/*border: 1px solid red;*/
+	top: 55%;
+	left: 100%;
+  transform: translate(-50%, -50%);
+  font-family: 'Flamenco', cursive;
+  }
+
+
+.btn-full{
+	background-color: transparent;
+	margin-right: 15px;
+  color:black;
+  border: 1px solid #66ff66;
+  background-color: #ffff66;
+}
+
+
+.btn-full:hover{
+	background-color: #66ff66;
+        box-shadow: 0 0px 0px 0 rgba(0, 230, 230,0.8), 0 20px 50px 0 rgba(89, 89, 89,1);
+        
+}
+
+.btn-nav{
+	background-color: transparent;
+  color:black;
+  border: 1px solid #66ff66;
+  background-color: #ffff66;
+  
+}
+
+.btn-nav:hover{
+	background-color: #66ff66;
+         box-shadow: 0 0px 0px 0 rgba(0, 230, 230,0.8), 0 20px 50px 0 rgba(89, 89, 89,1);
+}
+
+.colorchange{
+	animation:  colorchangethapa 1s infinite;
+          
+
+        
+}
+@keyframes colorchangethapa{
+	0%{color: red;}
+	25%{color:#66ff66; ;}
+	50%{ color:black; }
+	100%{ color:#ffff66;  }
+}
+/* ^ front page content ^ */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff url('./preloader.gif') no-repeat center;
+  z-index: 9999;
+}
+.logo{
+  height: 50px;
+  width: auto;
+  border-radius: 80%;
+}
+#collapsibleNavbar li:hover{
+border-bottom: 2px solid #ffff66; }
+.header {
+  height: 100vh;
+  background-image: url(bg1.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-inner {
+  position: fixed !important;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.navbar {
+  padding-top: 0;
+}
+
+.navbar .container {
+  background: #ffffffe3;
+  width: auto;
+  border-radius: 0 0 0.1em 0.1em;
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-nav {
+  text-align: center;
+  padding-left:1000px;
+}
+
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+  background: #fff;
+}
+
+#brand {
+  position: fixed;
+  top: 5em;
+  left: 33%;
+  background: #ffffffcf;
+  width: 35%;
+  border-radius: 0.5em;
+}
+
+#brand-name {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  text-align: center;
+  font-size: x-large;
+}
+
+#search-bar {
+  padding: 1em 1em 1em 1em;
+}
+
+#recipes {
+  display: none;
+  width: 90%;
+  background: #ffffffa6;
+  padding: 10px;
+  position: fixed;
+  top: 12em;
+  border-radius: 0.5em;
+  left: 5%;
+  height: 70%;
+  overflow: scroll;
+}
+
+#pics {
+  display: none;
+  width: 90%;
+  background: #ffffffa6;
+  padding: 10px;
+  position: fixed;
+  top: 12em;
+  border-radius: 0.5em;
+  left: 5%;
+  height: 70%;
+  overflow: scroll;
+}
+
+#nutri-analysis {
+  display: none;
+  width: 90%;
+  background: #ffffff;
+  padding: 10px;
+  position: fixed;
+  top: 12em;
+  border-radius: 0.5em;
+  left: 5%;
+  height: auto;
+  overflow: scroll;
+}
+
+.recipe-card {
+  float: left;
+  height:450px;
+  width:200px;
+  padding: 0.1em;
+  margin: 15px;
+}
+
+.pic-card {
+  float: left;
+  padding: 1em;
+  margin: 0.2em;
+}
+
+#contact-us {
+  width: 70%;
+  background: #ffffffd9;
+  padding: 1em 5em 2em 5em;
+  position: absolute;
+  top: 10%;
+  border-radius: 0.5em;
+  left: 15%;
+}
+
+.card-img-top {
+  width: 12em;
+  align-self: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 2em;
+  background: #636060e0;
+  left: 35%;
+  border-radius: 0.5em;
+  padding: 0.2em 1em 0.2em 1em;
+  color: #fefefe;
+}
+
+/* //pop form */
+.modal input[type=text], .modal input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+/* //#4CAF50 */
+/* Set a style for all buttons */
+.modal button {
+  background-color: #ffff66;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+.avatar {
+  width: 40%;
+  border-radius:80%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-contentanimate {
+  background-color:  #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 20%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+/* .close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+} */
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
+/* footer logo */
+
+
+.logo31footer{
+	height: 30px;
+	width: auto;
+	
+	margin-top: 1px;
+        
+}
+
+
+
+/* <!-- change last form --> */
+
+.boxcon{
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 90%;
+  color: #FF2;
+  font-family: 'Flamenco';
+  opacity:1;
+}
+/* .a{
+  text-align:center;
+  color:#3498db;
+  +-+96
+  
+  font-size: 30px;
+  
+} */
+/* .dd
+{
+text-align:center;
+  color:#3498db;
+  font-family: 'Flamenco';
+  font-size: 70px;
+  text-decoration: none;
+} */
+
+/* .dd:hover{
+ border-bottom: 2px solid #3498db; 
+} */
+.middlecon{
+ /* position: absolute; */
+ top: 50%;
+ transform: translateY(-5%);
+ width: 20%;
+ text-align: center;
+ /* bottom: 0; */
+}
+.btncon{
+ display: inline-block;
+ width: 30px;
+ height: 30px;
+ background:  #888;
+ margin: 1px;
+ border-radius: 30%;
+ box-shadow: 0 5px 15px -5px #00000070;
+ color: #FF2;
+ overflow: hidden;
+ position: relative;
+}
+.btncon i{
+ line-height: 30px;
+ font-size: 10px;
+ transition: 0.2s linear;
+}
+.btncon:hover i{
+ transform: scale(1.3);
+ color: #f1f1f1;
+}
+.btncon::before{
+ content: "";
+ position: absolute;
+ width: 60%;
+ height: 60%;
+ background: #FF2;
+ transform: rotate(45deg);
+ left: -110%;
+ top: 20%;
+}
+.btncon:hover::before{
+ animation: aaa 0.7s 1;
+ top: -10%;
+ left: -10%;
+}
+@keyframes aaa {
+ 0%{
+   left: -110%;
+   top: 90%;
+ }50%{
+   left: 10%;
+   top: -30%;
+ }100%{
+   top: -10%;
+   left: -10%;
+ }
+}
+
+.socialfooter{
+  left:0%;
+  width:10px;
+  
+  background: transparent;
+
+}
+
+#serchss{
+  padding-top:20px;
+ 
+}
+#serchss #search-button
+{
+  background-color: yellow;
+}
+/* <!-- change --> */
